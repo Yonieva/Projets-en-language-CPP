@@ -6,7 +6,7 @@
 #    By: yonieva <yonieva@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/03 15:19:20 by yonieva           #+#    #+#              #
-#    Updated: 2024/12/03 16:20:17 by yonieva          ###   ########.fr        #
+#    Updated: 2024/12/03 16:29:14 by yonieva          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRC = megaphone.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 RM = rm -f
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = megaphone
 
