@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yonieva <yonieva@student.42.fr>            +#+  +:+       +#+         #
+#    By: yonieva <yonieva@student.42perpignan.fr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/03 15:19:20 by yonieva           #+#    #+#              #
-#    Updated: 2024/12/03 16:29:14 by yonieva          ###   ########.fr        #
+#    Updated: 2024/12/08 19:33:32 by yonieva          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = megaphone.cpp
+SRC = Megaphone.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 RM = rm -f
