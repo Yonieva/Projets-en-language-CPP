@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yonieva <yonieva@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yonieva <yonieva@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 14:17:38 by yonieva           #+#    #+#             */
-/*   Updated: 2024/12/06 15:12:38 by yonieva          ###   ########.fr       */
+/*   Updated: 2024/12/08 00:32:54 by yonieva          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,10 @@ private:
     std::string secret;
 
 public:
-    contact(/* args */);
-    ~contact();
+    Contact();
+    ~Contact();
 
-    void    setContact(const std::string& firtsname, const std::string& lastname,
-                	   const std::string& nickname, const std::string& phonenumber,
-					   const std::string& secret);
-	void	displayShort(int index) const;
-	void	displayFull() const;	
+    void    setInfo(const std::string& attribute, const std::string& value);
+    std::string    getInfo(const std::string& attribute);
 };
 #endif

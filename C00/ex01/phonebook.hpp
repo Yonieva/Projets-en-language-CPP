@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yonieva <yonieva@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yonieva <yonieva@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 14:08:33 by yonieva           #+#    #+#             */
-/*   Updated: 2024/12/06 15:13:08 by yonieva          ###   ########.fr       */
+/*   Updated: 2024/12/08 00:46:46 by yonieva          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 # define PHONEBOOK_HPP
 
 #include "contact.hpp"
-#include <string>
 #include <iostream>
+#include <iomanip>
+#include <cstdlib>
 
 class Phonebook
 {
     private:
-        Contact contacts[8];
-        int count;
+        Contact _contacts[8];
+        int _index;
 
     public:
         Phonebook();
@@ -29,6 +30,7 @@ class Phonebook
 
         void    add(void);
         void    search(void);
-    
+        std::string truncate(const std::string& str);
+        void	display();		  
 };
 #endif
