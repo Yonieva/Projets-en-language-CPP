@@ -6,17 +6,17 @@
 #    By: yonieva <yonieva@student.42perpignan.fr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/03 15:19:20 by yonieva           #+#    #+#              #
-#    Updated: 2024/12/08 18:49:55 by yonieva          ###   ########.fr        #
+#    Updated: 2024/12/09 15:17:24 by yonieva          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = Phonebook.cpp Contact.cpp Main.cpp 
+SRC = Main.cpp Zombie.cpp NewZombie.cpp RandomChump.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Phonebook
+NAME = Zombie
 
 all: $(NAME)
 
