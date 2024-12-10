@@ -17,8 +17,8 @@ int main()
 {
     std::string str = "HI THIS IS BRAIN";
 
-    std::string* string_pointer = &str;
-    std::string& string_reference = str;
+    std::string *string_pointer = &str;
+    std::string &string_reference = str;
 
     std::cout << "Memory address of the string variable: " << &str << std::endl;
     std::cout << "Memory address by pointer: " << string_pointer << std::endl;
