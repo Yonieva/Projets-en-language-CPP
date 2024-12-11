@@ -6,7 +6,7 @@
 #    By: yonieva <yonieva@student.42perpignan.fr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/11 14:15:36 by yonieva           #+#    #+#              #
-#    Updated: 2024/12/11 21:54:45 by yonieva          ###   ########.fr        #
+#    Updated: 2024/12/11 23:14:55 by yonieva          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Convert
+NAME = Incrementation
 
 all: $(NAME)
 
