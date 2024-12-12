@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
-#define FIXED_HPP
+# define FIXED_HPP
 
 #include <iostream>
 
@@ -59,9 +59,11 @@ public:
     static Fixed &max(Fixed &a, Fixed &b);
     static const Fixed &max(const Fixed &a, const Fixed &b);
 
-    // Friend function for operator<< overload
-    friend std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
+
 };
+
+    // function for operator<< overload
+    std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
 
 #endif
 
