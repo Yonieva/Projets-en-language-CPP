@@ -1,0 +1,45 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yonieva <yonieva@student.42perpignan.fr    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/19 22:00:03 by yonieva           #+#    #+#             */
+/*   Updated: 2024/12/19 22:00:03 by yonieva          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Dog.hpp"
+
+Dog::Dog()
+{
+    this->type = "Dog";
+    std::cout<< "Constructor Dog Called" << std::endl;
+}
+
+Dog::~Dog()
+{
+    std::cout<< "Destructor Dog Called" << std::endl;
+}
+
+Dog::Dog(const Dog &other) : Animal(other) 
+{
+    *this = other;
+    std::cout << "Dog copied." << std::endl;
+}
+
+Dog &Dog::operator=(const Dog &other) 
+{
+    if (this != &other) 
+    {
+        Animal::operator=(other);
+    }
+    std::cout << "Dog assigment." << std::endl;
+    return *this;
+}
+
+void    Dog::makeSound() const
+{
+    std::cout<< "WOUAF WOUAF !!" << std::endl;
+}
