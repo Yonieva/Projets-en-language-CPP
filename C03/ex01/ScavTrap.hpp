@@ -10,34 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
 
 #include <iostream>
 #include <string>
+#include "ClapTrap.hpp"
 
-class ClapTrap
+class ScavTrap : public ClapTrap
 {
-    private :
-        std::string Name;
-        unsigned int Hit_point;
-        unsigned int Energy_point;
-        unsigned int Attack_damage;
-
-
-
     public :
 
-        ClapTrap();
-        ClapTrap(std::string Name);
-        ClapTrap(const ClapTrap &copy);
-        ClapTrap &operator=(const ClapTrap &other);
-        ~ClapTrap();
+        ScavTrap();
+        ScavTrap(std::string Name);
+        ~ScavTrap();
 
-        void    attack(const std::string& target);
-        void    takeDamage(unsigned int amount);
-        void    beRepaired(unsigned int amount);
+        void    attack(const std::string &target);
+        void    guardGate();
 
 };
 

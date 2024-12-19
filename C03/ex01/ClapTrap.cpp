@@ -23,7 +23,7 @@ ClapTrap::ClapTrap()
 
 ClapTrap::ClapTrap(std::string Name)
 {
-    std::cout << "Constructor wiht name called" << std::endl;
+    std::cout << "Constructor ClapTrap wiht name called" << std::endl;
     this->Name = Name;
     this->Hit_point = 10;
     this->Energy_point = 10;
@@ -32,7 +32,7 @@ ClapTrap::ClapTrap(std::string Name)
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destuctor called" << std::endl;
+    std::cout << "ClapTrap Destuctor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy)

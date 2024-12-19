@@ -6,17 +6,17 @@
 #    By: yonieva <yonieva@student.42perpignan.fr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/11 14:15:36 by yonieva           #+#    #+#              #
-#    Updated: 2024/12/11 23:14:55 by yonieva          ###   ########.fr        #
+#    Updated: 2024/12/19 19:34:04 by yonieva          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = Main.cpp Fixed.cpp
+SRC = Main.cpp ScavTrap.cpp ClapTrap.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Incrementation
+NAME = ScavTrap
 
 all: $(NAME)
 

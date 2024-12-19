@@ -30,7 +30,7 @@ Fixed &Fixed::operator=(const Fixed &other)
 {
     std::cout << "Copy assignment operator called" << std::endl;
     if (this != &other) {
-        _Value = other._Value;
+        this->_Value = other._Value;
     }
     return *this;
 }
@@ -45,11 +45,11 @@ Fixed::~Fixed()
 int Fixed::getRawBits(void) const 
 {
     std::cout << "getRawBits member function called" << std::endl;
-    return _Value;
+    return (this->_Value);
 }
 
 // Fonction membre pour définir la valeur brute
 void Fixed::setRawBits(int const raw) 
 {
-    _Value = raw;
+    this->_Value = raw;
 }
