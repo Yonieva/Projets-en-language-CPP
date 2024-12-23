@@ -10,41 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
-Animal::Animal()
-{
-    this->type = "Animal";
-    std::cout<< "Constructor Animal Called" << std::endl;
-}
+#include <iostream>
+#include <string>
 
-Animal::Animal(const Animal &other)
+class Animal
 {
-    *this = other;
-    std::cout << "Animal copied." << std::endl;
-}
+    protected :
 
-Animal &Animal::operator=(const Animal &other) 
-{
-    if (this != &other) 
-    {
-        Animal::operator=(other);
-    }
-    std::cout << "Animal assigment." << std::endl;
-    return *this;
-}
+        std::string type;
 
-Animal::~Animal()
-{
-    std::cout<< "Destructor Animal Called" << std::endl;
-}
+    public :
 
-void    Animal::makeSound() const
-{
-    std::cout<< "ANIMAL NOISE !!!!!!!" << std::endl;
-}
+        Animal();
+        Animal(const Animal &copy);
+        Animal &operator=(const Animal &other);
+        virtual ~Animal();
 
-std::string Animal::getType() const 
-{
-    return this->type;
-}
+        virtual void makeSound() const;
+        std::string getType() const;
+};
+
+
+
+#endif

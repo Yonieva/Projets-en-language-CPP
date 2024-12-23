@@ -12,6 +12,7 @@
 
 #include "Animal.hpp"
 
+
 Animal::Animal()
 {
     this->type = "Animal";
