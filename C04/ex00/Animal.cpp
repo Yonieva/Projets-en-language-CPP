@@ -28,7 +28,7 @@ Animal &Animal::operator=(const Animal &other)
 {
     if (this != &other) 
     {
-        Animal::operator=(other);
+        this->type = other.type;
     }
     std::cout << "Animal assigment." << std::endl;
     return *this;
