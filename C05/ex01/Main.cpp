@@ -11,45 +11,36 @@
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
+
 
 int main()
 {
     try
     {
-        Bureaucrat marcel("Marcel", 150);
-        std::cout << marcel << std::endl;
+        Bureaucrat bertrand("Bertrand", 50);
+        Bureaucrat roger("Roger", 100);
 
-        marcel.decrementGrade();
+        // Création de formulaires avec des grades requis différents
+        Form permis("Permis de Construire", 75, 50);
+        Form augmentation("Augmentation des salaires", 30, 20);
+
+        std::cout << permis << std::endl;
+        std::cout << augmentation << std::endl;
+
+        // Roger essaie de signer, mais il ne peut pas
+        roger.signForm(permis);
+        // Bertrand peut signer et essayer d'exécuter
+        bertrand.signForm(permis);
+        bertrand.signForm(augmentation);
+
+        // Imprimer les formulaires après tentative de signature
+        std::cout << permis << std::endl;
+        std::cout << augmentation << std::endl;
     }
     catch (const std::exception &e)
     {
-        std::cerr << e.what() << std::endl;
-    }
-
-    try
-    {
-        Bureaucrat alice("Alice", 1);
-        std::cout << alice << std::endl;
-
-        alice.incrementGrade();
-    }
-    catch (const std::exception &e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
-
-    try
-    {
-        Bureaucrat roger("Roger", 25);
-        std::cout << roger << std::endl;
-        roger.incrementGrade();
-        std::cout << roger << std::endl;
-        roger.decrementGrade();
-        std::cout << roger << std::endl;
-    }
-    catch (const std::exception &e)
-    {
-        std::cerr << e.what() << std::endl;
+        std::cerr << "Error: " << e.what() << std::endl;
     }
 
     return 0;

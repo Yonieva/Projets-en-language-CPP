@@ -12,6 +12,7 @@
 
 #include "Bureaucrat.hpp"
 
+
 Bureaucrat::Bureaucrat(const std::string &name, int grade) : name(name)
 {
     std::cout << "Constructor Bureaucrat standard called" << std::endl;
@@ -68,6 +69,31 @@ void Bureaucrat::decrementGrade()
     this->grade++;
     std::cout << "Decrementation of Grade SUCCES !!" << std::endl;
 }
+
+void Bureaucrat::signForm(Form &form) const
+{
+    try
+    {
+        form.beSigned(*this);
+        std::cout << this->name << " signed " << form.getName() << std::endl;
+    }
+    catch (std::exception &e)
+    {
+        std::cout << this->name << " couldn’t sign " << form.getName()
+                  << " because " << e.what() << std::endl;
+    }
+    
+    try
+    {
+        form.execute(*this);  // Vous devriez définir une méthode `execute` dans `Form` pour gérer cela.
+        std::cout << this->name << " executed " << form.getName() << std::endl;
+    }
+    catch (const std::exception &e)
+    {
+        std::cout << this->name << " couldn't execute " << form.getName() << " because " << e.what() << std::endl;
+    }
+}
+
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()
 {
