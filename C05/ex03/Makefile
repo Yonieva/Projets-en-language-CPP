@@ -6,17 +6,17 @@
 #    By: yonieva <yonieva@student.42perpignan.fr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/30 14:42:43 by yonieva           #+#    #+#              #
-#    Updated: 2025/01/07 19:09:51 by yonieva          ###   ########.fr        #
+#    Updated: 2025/01/07 20:01:00 by yonieva          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = Main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp 
+SRC = Main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Form++ 
+NAME = Intern
 
 all: $(NAME)
 
