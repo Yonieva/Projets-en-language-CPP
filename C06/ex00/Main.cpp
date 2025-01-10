@@ -5,29 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yonieva <yonieva@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/30 14:43:45 by yonieva           #+#    #+#             */
-/*   Updated: 2024/12/30 14:43:45 by yonieva          ###   ########.fr       */
+/*   Created: 2025/01/10 13:06:14 by yonieva           #+#    #+#             */
+/*   Updated: 2025/01/10 13:06:14 by yonieva          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <stdexcept>
-#include "Intern.hpp"
+#include "ScalarConverter.hpp"
 
-int main() 
+int main(int argc, char **argv) 
 {
-    Intern RandomIntern;
+    if (argc != 2) 
+    {
+        std::cerr << "Only 1 argument please !!!" << std::endl;
+        std::cerr << "Usage: ./Convert <argument>" << std::endl;
+        return 1;
+    }
 
-    AForm* form1 = RandomIntern.makeForm("robotomy request", "Idiot");
-    AForm* form2 = RandomIntern.makeForm("shrubbery creation", "Home");
-    AForm* form3 = RandomIntern.makeForm("unknown form", "Nowhere");
-
-
-
-    delete form1;
-    delete form2;
-    delete form3;
-
+    ScalarConverter::convert(argv[1]);
     return 0;
 }
-
