@@ -25,8 +25,11 @@ ScalarConverter::ScalarConverter (const ScalarConverter &copy)
 
 ScalarConverter &ScalarConverter::operator=(const ScalarConverter &other)
 {
-    std::cout << "Constructor by assignment ScalarConverter Called" << std::endl;
-    (void)other;  //eviter err compil param non utilise
+    if (this != &other)
+    {
+        std::cout << "Constructor by assignment ScalarConverter Called" << std::endl;
+        (void)other;  //eviter err compil param non utilise
+    }
     return *this;
 }
 
