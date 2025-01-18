@@ -23,7 +23,7 @@ int main(void)
 
     // Désérialisation pour récupérer l'adresse
     Data* deserializedData = Serializer::deserialize(serializedData);
-
+    std::cout << std::endl;
     // Affichage des adresses
     std::cout << "Adresse mémoire où l'objet Test_data est stocké." << std::endl;
     std::cout << "Original address: " << &originalData << std::endl;
@@ -33,15 +33,6 @@ int main(void)
     std::cout << std::endl;
     std::cout << "l'adresse obtenue après désérialisation." << std::endl;
     std::cout << "Deserialized address: " << deserializedData << std::endl;
-    
-    // Vérification des adresses
-    if (&originalData == deserializedData)
-    {
-        std::cout << "Success: The deserialized pointer matches the original pointer." << std::endl;
-    }
-    else
-    {
-        std::cout << "Error: The deserialized pointer does not match the original pointer." << std::endl;
-    }
+    std::cout << std::endl;
     return 0;
 }
