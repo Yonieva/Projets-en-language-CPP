@@ -6,12 +6,12 @@
 #    By: yonieva <yonieva@student.42perpignan.fr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/09 16:46:59 by yonieva           #+#    #+#              #
-#    Updated: 2025/01/18 21:50:05 by yonieva          ###   ########.fr        #
+#    Updated: 2025/01/18 21:58:13 by yonieva          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-SRC = Main.cpp Base.cpp Utils.cpp
+SRC = Main.cpp Base.cpp utils.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 RM = rm -f

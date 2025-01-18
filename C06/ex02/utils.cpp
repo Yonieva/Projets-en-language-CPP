@@ -17,7 +17,6 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
-#include <typeinfo>
 
 // Fonction pour générer un objet aléatoire
 Base* generate() 
@@ -53,33 +52,5 @@ void identify(Base* p)
 // Identifier le type à partir d'une référence
 void identify(Base& p) 
 {
-    try 
-    {
-        (void)dynamic_cast<A&>(p);
-        std::cout << "A" << std::endl;
-    } 
-    catch (std::bad_cast&) //dynamic_cast retournent pointeur null en cas d echec
-    {
-    }
-
-
-    try 
-    {
-        (void)dynamic_cast<B&>(p);
-        std::cout << "B" << std::endl;
-    } 
-    catch (std::bad_cast&) 
-    {
-    }
-
-
-
-    try 
-    {
-        (void)dynamic_cast<C&>(p);
-        std::cout << "C" << std::endl;
-    } 
-    catch (std::bad_cast&) 
-    {
-    }
+    identify(&p);  // Utilisation du pointeur pour appeler l'autre fonction identify
 }
