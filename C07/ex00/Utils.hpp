@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 
-#ifndef WHATEVER_HPP
-#define WHATEVER_HPP
+#ifndef UTILS_HPP
+#define UTILS_HPP
 
 #include <iostream>
 #include <string>

@@ -98,9 +98,6 @@ const T &Array<T>::operator[](size_t index) const
     return this->elements[index];
 }
 
-//Avec l operateur [] :
-//arr.set(0, 10);            // Définir une valeur.
-//std::cout << arr.get(0);   // Récupérer une valeur.
 
 //sans l operateur [] on aurait du utiliser des get/set:
 //arr.set(0, 10);            // Définir une valeur.
