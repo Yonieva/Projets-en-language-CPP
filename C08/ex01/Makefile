@@ -6,11 +6,11 @@
 #    By: yonieva <yonieva@student.42perpignan.fr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/19 20:35:07 by yonieva           #+#    #+#              #
-#    Updated: 2025/01/23 16:03:06 by yonieva          ###   ########.fr        #
+#    Updated: 2025/01/23 16:50:31 by yonieva          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = Main.cpp
+SRC = Main.cpp Span.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 RM = rm -f
