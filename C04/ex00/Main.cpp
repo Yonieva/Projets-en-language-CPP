@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yonieva <yonieva@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/24 00:08:39 by yonieva           #+#    #+#             */
-/*   Updated: 2024/12/24 00:08:39 by yonieva          ###   ########.fr       */
+/*   Created: 2024/12/19 22:23:45 by yonieva           #+#    #+#             */
+/*   Updated: 2024/12/19 22:23:45 by yonieva          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,33 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
-
-
 int main() 
 {
-    AAnimal animal; // ERREUR : Impossible d'instancier une classe abstraite
+    const Animal *meta = new Animal();
+    const Animal *j = new Dog();
+    const Animal *i = new Cat();
 
-    AAnimal *dog = new Dog();
-    AAnimal *cat = new Cat();
+    std::cout << j->getType() << " " << std::endl;
+    std::cout << i->getType() << " " << std::endl;
 
-    dog->makeSound(); // Woof woof!
-    cat->makeSound(); // Meow meow!
+    i->makeSound();
+    j->makeSound();
+    meta->makeSound();
 
-    delete dog;
-    delete cat;
+    delete meta;
+    delete j;
+    delete i;
+
+    const WrongAnimal *wrongMeta = new WrongAnimal();
+    const WrongAnimal *wrongI = new WrongCat();
+
+    std::cout << wrongI->getType() << " " << std::endl;
+
+    wrongI->makeSound(); // Affiche le son de WrongAnimal
+    wrongMeta->makeSound();
+
+    delete wrongMeta;
+    delete wrongI;
 
     return 0;
 }
-

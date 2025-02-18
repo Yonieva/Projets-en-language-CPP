@@ -14,8 +14,20 @@
 
 int main()
 {
+
     try
     {
+        Bureaucrat henry("Henry", -100);
+        std::cout << henry << std::endl;
+
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+    try
+    {
+        //Bureaucrat Henry("Henry", -100);
         Bureaucrat marcel("Marcel", 150);
         std::cout << marcel << std::endl;
 
