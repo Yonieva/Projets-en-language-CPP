@@ -26,6 +26,8 @@ class BitcoinExchange
         BitcoinExchange(const std::string& databaseFile);
         void loadDatabase(const std::string& filename);
         float getRate(const std::string& date) const;
+        bool isValidDate(const std::string& date) const;
+        void processInputFile(const std::string& filename) const;
 };
 
 #endif
