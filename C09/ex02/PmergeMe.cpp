@@ -56,7 +56,7 @@ bool isPositiveInteger(const std::string &str)
 // Parsing des arguments
 bool PmergeMe::parseInput(int argc, char** argv) 
 {
-    if (argc < 2) 
+    if (argc <= 2) 
     {
         std::cerr << "Error: No arguments provided." << std::endl;
         return false;
